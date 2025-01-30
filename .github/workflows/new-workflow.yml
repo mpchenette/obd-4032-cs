@@ -1,6 +1,8 @@
-name: New GitHub Actions Workflow
+name: New Scheduled GitHub Actions Workflow
 
-on: [push]
+on:
+  schedule:
+    - cron: "*/1 * * * *"
 
 jobs:
   build:
