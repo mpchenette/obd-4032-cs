@@ -20,7 +20,7 @@ jobs:
           
     - name: Create new scheduled workflow file
       run: |
-        cat <<EOF > .github/workflows/new-workflow.yml
+        cat <<EOF > .github/workflows/new-scheduled-workflow.yml
         name: New Scheduled GitHub Actions Workflow
 
         on:
