@@ -41,6 +41,8 @@ jobs:
 
     - name: Commit and push new workflow file
       run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git add .
         git commit -m "Add new GitHub Actions workflow file"
         git push
