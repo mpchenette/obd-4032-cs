@@ -17,7 +17,10 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-
+      with:
+        # Fine-grained PAT with contents:write and workflows:write scopes
+        token: ${{ secrets.WORKFLOW_TOKEN }}
+          
     - name: Create new workflow file
       run: |
         cat <<EOF > .github/workflows/new-workflow.yml
