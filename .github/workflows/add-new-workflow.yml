@@ -2,9 +2,7 @@
 
 name: Add New GitHub Actions Workflow
 
-permissions:
-  contents: write
-  actions: write
+permissions: write-all
 
 on:
   push:
