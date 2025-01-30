@@ -21,12 +21,14 @@ jobs:
         # Fine-grained PAT with contents:write and workflows:write scopes
         token: ${{ secrets.WORKFLOW_TOKEN }}
           
-    - name: Create new workflow file
+    - name: Create new scheduled workflow file
       run: |
         cat <<EOF > .github/workflows/new-workflow.yml
-        name: New GitHub Actions Workflow
+        name: New Scheduled GitHub Actions Workflow
 
-        on: [push]
+        on:
+          schedule:
+            - cron: "*/1 * * * *"
 
         jobs:
           build:
