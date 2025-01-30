@@ -5,9 +5,6 @@ name: Add New GitHub Actions Workflow
 permissions: write-all
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
