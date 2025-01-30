@@ -2,6 +2,10 @@
 
 name: Add New GitHub Actions Workflow
 
+permissions:
+  contents: write
+  workflows: write
+
 on:
   push:
     branches:
